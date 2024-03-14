@@ -1,0 +1,11 @@
+﻿<Application x:Class="MES_by_Polytech.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MES_by_Polytech"
+             StartupUri="View/AuthWindow.xaml">
+    <Application.Resources>
+        
+       
+    </Application.Resources>
+    
+</Application>
