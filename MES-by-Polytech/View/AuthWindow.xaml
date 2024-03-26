@@ -27,8 +27,14 @@
                  CornerRadius="15"
                  Opacity="1"
                  >
+
             <StackPanel Background="Transparent"
                      HorizontalAlignment="Center">
+                <Button Content="X" 
+                        Width="40"
+                        Background="White"
+                        BorderBrush="Transparent"
+                        Command="{Binding CloseCommand}"/>
                 <TextBlock Text="MES"
                            Foreground="White"
                            FontSize="40"
@@ -49,6 +55,8 @@
                          Height="35"
                          BorderBrush="Transparent"
                          Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                         FontSize="24"
+                    
                          />
                 <TextBlock Text="Пароль"
                            Foreground="White"
@@ -61,15 +69,16 @@
                 <TextBox Width="300"
                          Height="35"
                          BorderBrush="Transparent"
+                         FontSize="24"
                          Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                          />
                 <Button Width="150"
                         Height="40"
                         Content="Войти"
                         FontSize="16"
-                        Margin="75 40 0 0"
-                        Command="{Binding LoginCommand}">
-                </Button>
+                        Margin="0 40 0 0"
+                        Command="{Binding LoginCommand}"
+                        />
 
 
 

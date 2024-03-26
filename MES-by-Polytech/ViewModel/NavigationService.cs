@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MES_by_Polytech.Model
+namespace MES_by_Polytech.ViewModel
 {
-    internal class Stores
+    internal class NavigationService
     {
     }
 }

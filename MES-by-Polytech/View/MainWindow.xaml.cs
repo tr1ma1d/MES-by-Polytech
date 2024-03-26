@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MES_by_Polytech.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace MES_by_Polytech
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btWorkshop_Click(object sender, RoutedEventArgs e)
+        {
+            ContentArea.Navigate(new WorkshopPage());
+        }
+
+        private void btStorage_Click(object sender, RoutedEventArgs e)
+        {
+            ContentArea.Navigate(new StoragePage());
+        }
+
+        private void btHistory_Click(object sender, RoutedEventArgs e)
+        {
+            ContentArea.Navigate(new HistoryPage());
+        }
+
+        private void btSearch_Click(object sender, RoutedEventArgs e)
+        {
+            ContentArea.Navigate(new BrowseGood());
         }
     }
 }

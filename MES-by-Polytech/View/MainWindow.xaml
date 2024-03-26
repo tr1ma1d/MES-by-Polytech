@@ -3,10 +3,123 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MES_by_Polytech"
+        xmlns:local="clr-namespace:MES_by_Polytech.ViewModel"
         mc:Ignorable="d"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        WindowState="Maximized"
         Title="MainWindow" Height="1080" Width="1920">
+    
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="FontAwesomeButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="20"
+                        >
+                        
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="129*"></ColumnDefinition>
+            <ColumnDefinition Width="1783*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="109*"></RowDefinition>
+            <RowDefinition Height="940*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Background="#222831">
+
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Background="#222831">
+            <Button x:Name ="btWorkshop" Height="90"
+                    Width="90"
+                    BorderBrush="Transparent"
+                    Background="#19273C"
+                    Margin="10"
+                    Style="{StaticResource FontAwesomeButtonStyle}" Click="btWorkshop_Click"
+                    >
+               
+                <fa:FontAwesome 
+                    FontSize="64"
+                    Icon="ShoppingCart"/>   
+            </Button>
+            <Button x:Name ="btStorage" 
+                    Height="90"
+                    Width="90"
+                    BorderBrush="Transparent"
+                    Background="#19273C"
+                    Margin="10"
+                    Style="{StaticResource FontAwesomeButtonStyle}" Click="btStorage_Click"
+        >
+
+                <fa:FontAwesome 
+                    FontSize="64"
+                    Icon="Shield"/>
+            </Button>
+            <Button x:Name ="btHistory" 
+                    Height="90"
+                    Width="90"
+                    BorderBrush="Transparent"
+                    Background="#19273C"
+                    Margin="10"
+                    Style="{StaticResource FontAwesomeButtonStyle}" Click="btHistory_Click"
+        >
+
+                <fa:FontAwesome 
+                    FontSize="64"
+                    Icon="History"/>
+            </Button>
+            <Button x:Name ="btSearch" 
+                    Height="90"
+                    Width="90"
+                    BorderBrush="Transparent"
+                    Background="#19273C"
+                    Margin="10"
+                    Style="{StaticResource FontAwesomeButtonStyle}" Click="btSearch_Click"
+        >
+
+                <fa:FontAwesome 
+                    FontSize="64"
+                    Icon="Search"/>
+            </Button>
+
+        </StackPanel>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="1"
+                    Background="#344955"
+                    >
+            <TextBlock Text="MES"
+                       FontSize="64"
+                       FontFamily="Arial"
+                       FontWeight="Bold"
+                       FontStretch="Medium"
+                       Foreground="#EEEEEE"
+                       Width="150"
+                       Margin="816,0,817,0"
+                       />
+        </StackPanel>
         
+        <Frame x:Name="ContentArea" 
+               NavigationUIVisibility="Hidden"
+               Grid.Row="1"
+               Grid.Column="1"
+               Background="#19273C"/>    
+
     </Grid>
+
 </Window>
