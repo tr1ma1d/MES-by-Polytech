@@ -34,7 +34,7 @@ namespace MES_by_Polytech.ViewModel
             conncet = new Conncet();
 
             List<History> historLists = new List<History>();
-            string query = "FROM history";
+            string query = "FROM history INNER JOIN cycle ON history.cycle_id = cycle.id";
             NpgsqlDataReader reader = conncet.CheckInDateBase(query);
             while (reader.Read())
             {

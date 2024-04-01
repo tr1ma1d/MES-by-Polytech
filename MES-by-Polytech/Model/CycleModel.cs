@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using MES_by_Polytech.DateBase;
 using Npgsql;
 using System.Windows;
+using System.Windows.Navigation;
 namespace MES_by_Polytech.Model
 {
     internal class CycleModel
@@ -20,6 +21,10 @@ namespace MES_by_Polytech.Model
         public string WheelsName {  get; set; }
         public string Frame { get; set; }
         private Conncet conncet;
+        public CycleModel()
+        {
+
+        }
         public void BuildCycle(int id)
         {
             conncet = new Conncet();
@@ -35,10 +40,7 @@ namespace MES_by_Polytech.Model
 
             MessageBox.Show("Операция успешно прошла");
         }
-        public CycleModel()
-        {
-            
-        }
+       
         
         public void AddNewCycle()
         {
@@ -58,6 +60,10 @@ namespace MES_by_Polytech.Model
             
            
         }
+
+
+
+        
         
     }
 }

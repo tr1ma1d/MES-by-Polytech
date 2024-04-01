@@ -11,7 +11,7 @@ namespace MES_by_Polytech.DateBase
     internal class Conncet
     {
         private static string connectionString = "Host=localhost;Port=5432;Database=test;Username=postgres;Password=admin";
-
+        
         private NpgsqlConnection ConncetToDateBaseOpen()
         {
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
@@ -42,6 +42,7 @@ namespace MES_by_Polytech.DateBase
            
             return reader;
         }
+
         public NpgsqlDataReader LoadCycleFromDateBase(int firstIndexFromList, int secondIndexFromList, int thirdIndexFromList)
         {
             List<CycleModel> cycle = new List<CycleModel>();
@@ -56,8 +57,18 @@ namespace MES_by_Polytech.DateBase
             
             return reader;
         }
-        
-       
+
+        public void DeletedData(string query)
+        {
+            string sqlQuery = "DELETE FROM " + query;
+            var conn = ConncetToDateBaseOpen();
+            NpgsqlCommand command = new NpgsqlCommand (sqlQuery, conn);
+            command.ExecuteNonQuery();
+
+
+
+            ConncetToDateBaseClose(conn);
+        }
         public void ConncetToDateBaseClosePublic()
         {
             var conn = ConncetToDateBaseOpen();

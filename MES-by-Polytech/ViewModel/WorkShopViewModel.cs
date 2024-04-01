@@ -11,6 +11,7 @@ using MES_by_Polytech.Model;
 using Npgsql;
 using Prism.Mvvm;
 using Prism.Commands;
+using System.Windows.Media;
 namespace MES_by_Polytech.ViewModel
 {
     internal class WorkShopViewModel : BindableBase
@@ -42,6 +43,11 @@ namespace MES_by_Polytech.ViewModel
             LoadBicyclesFromDatabase();
 
         }
+        public void GetDateAlgoritms(History selectedHistory)
+        {
+            
+            
+        }
         private void LoadBicyclesFromDatabase()
         {
             Conncet conncet = new Conncet();
@@ -68,6 +74,7 @@ namespace MES_by_Polytech.ViewModel
             conncet.ConncetToDateBaseClosePublic();
 
         }
+        
         private void MakeFirstCycle()
         {
             int id = _bicycles[0].IdCycle;

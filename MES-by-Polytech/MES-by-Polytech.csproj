@@ -120,6 +120,8 @@
     <Compile Include="DateBase\Conncet.cs" />
     <Compile Include="Macro\RelayCommand.cs" />
     <Compile Include="ViewModel\HistoryViewModel.cs" />
+    <Compile Include="Model\IconColorInfo.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
     <Compile Include="ViewModel\StorageViewModel.cs" />
     <Compile Include="ViewModel\WorkShopViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
